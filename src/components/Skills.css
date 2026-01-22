@@ -1,0 +1,48 @@
+.skills{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+  align-items:center;
+  color:#fff;
+}
+
+.title.pill{
+  width:80%;
+  text-align:center;
+  color:#fff;
+  background:var(--pill-bg);
+}
+
+.icons-row{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  margin:6px 0 18px;
+}
+
+.icon{
+  width:64px;
+  height:64px;
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow:0 4px 8px rgba(0,0,0,0.08);
+}
+
+.sprite{
+  background-image: url("../assets/skills.png"); 
+  background-repeat: no-repeat;
+  background-size: auto; 
+}
+
+
+.icon-1{ background-position: 0   0; }
+.icon-2{ background-position: -70px 0; }
+.icon-3{ background-position: -143px 0; }
+.icon-4{ background-position: -214px 0; }
+
+.formation{
+  max-width:380px;
+  background:transparent;
+  color:#111;
+  padding:6px;
+}
