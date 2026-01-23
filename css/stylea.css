@@ -1,0 +1,146 @@
+@font-face {
+    font-family: 'MaPolicePerso';
+    src: url('/police/zh-cn.ttf') format('truetype');
+    font-weight: 100 900; 
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: 'MaPolicePerso', 'Poppins', sans-serif;
+    font-weight: 300; 
+    background: linear-gradient(180deg,
+        #4a5f9d 0%,
+        #5a6fb5 20%,
+        #6b84c5 35%,
+        #8ba0d5 50%,
+        #a8bce5 65%,
+        #c5d8f0 80%,
+        #dce9f8 100%);
+    min-height: 100vh;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.hero {
+    background: linear-gradient(180deg, #445ea1 0%, #7697d6 45%, #ffffff 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.5rem 3rem;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+nav a:hover {
+    color: #5A2BBF;
+    transform: scale(1.1);
+}
+
+.main-title {
+    color: white;
+    font-size: 8rem;
+    text-align: center;
+    margin: 2rem 0 4rem 0;
+    font-weight: normal;
+}
+
+.welcome-section {
+    max-width: 900px;
+    margin: 0 auto 5rem auto;
+    text-align: center;
+}
+
+h2 .highlight {
+    color: #a389f4;
+}
+
+.intro-text {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    color: #1a1a1a;
+}
+
+.cards-section {
+    display: flex;
+    justify-content: center;
+    gap: 4rem; 
+    padding: 2rem;
+}
+
+.card {
+    width: 320px;
+    text-align: center;
+}
+
+.vitrail-container {
+    width: 100%;
+    height: auto !important;
+    overflow: visible !important;
+    background: transparent;
+    transition: transform 0.3s ease;
+}
+
+.vitrail-img {
+    width: 100%;
+    height: auto !important;
+    display: block;
+    border-radius: 0 !important; 
+    object-fit: contain;
+}
+
+.card:hover .vitrail-container {
+    transform: translateY(-15px);
+}
+
+.card-title {
+    font-family: 'MaPolicePerso', sans-serif !important;
+    font-size: 48px !important;
+    font-weight: normal !important;
+    color: #000000;
+    margin-top: 15px;     
+}
+
+footer {
+    margin-top: auto;
+    padding: 3rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: #080808;
+}
+
+.footer-left h3 {
+    display: inline-block;
+    font-weight: normal;
+    border-bottom: none;
+}
+
+.copyright {
+    font-size: 0.8rem;
+}
+
+
+@media (max-width: 968px) {
+    .content-grid { grid-template-columns: 1fr; }
+    nav { justify-content: center; padding: 1rem; }
+}

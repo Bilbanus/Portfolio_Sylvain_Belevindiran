@@ -1,0 +1,238 @@
+/* --- POLICE PERSONNALISÉE --- */
+@font-face {
+    font-family: 'MaPolicePerso';
+    src: url('../police/zh-cn.ttf') format('truetype');
+    font-weight: 100 900; 
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: 'MaPolicePerso', 'Poppins', sans-serif;
+    font-weight: 300; 
+    background: linear-gradient(180deg,
+        #4a5f9d 0%,
+        #5a6fb5 20%,
+        #6b84c5 35%,
+        #8ba0d5 50%,
+        #a8bce5 65%,
+        #c5d8f0 80%,
+        #dce9f8 100%);
+    min-height: 100vh;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* --- NAVIGATION STYLE ACCUEIL --- */
+nav {
+    display: flex;
+    justify-content: flex-end; /* Aligné à droite comme sur l'accueil */
+    padding: 1.5rem 3rem;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+/* Effet violet et grossissement au survol */
+nav a:hover {
+    color: #5A2BBF !important;
+    transform: scale(1.1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 40px 60px;
+}
+
+.hero h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: 6px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.decorative-branches {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-bottom: 80px;
+}
+
+.branch {
+    width: 150px;
+    height: 2px;
+    background: rgba(255,255,255,0.4);
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+/* --- SECTION PROFIL --- */
+.avatar-card {
+    text-align: center;
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #fff;
+    border: 5px solid rgba(0,0,0,0.8);
+    margin: 0 auto 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.name, .firstname {
+    font-size: 1.3rem;
+    background: linear-gradient(90deg, #5A2BBF, #BB9DFF, #5A2BBF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.name {
+    font-weight: 700;
+    display: inline-block;
+}
+
+.firstname {
+    display: block;
+    font-weight: 400;
+}
+
+.title {
+    color: #000;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+/* --- CARTES ET TITRES --- */
+.section-card {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    background: linear-gradient(90deg,#5A2BBF,#BB9DFF,#5A2BBF);
+    padding: 12px;
+    border-radius: 30px;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.section-content, .contact-info {
+    background: rgba(255,255,255,0.95);
+    color: #000;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* --- ICÔNES LOGICIELS --- */
+.dev-icons {
+    display: grid;
+    grid-template-columns: repeat(2, 70px); 
+    gap: 15px 20px; 
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.dev-icon {
+    width: 70px;
+    height: 70px;
+    transition: transform 0.3s ease;
+}
+
+.dev-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.dev-icon:hover {
+    transform: scale(1.1);
+}
+
+/* --- SECTION PROJETS (AJOUTÉ) --- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    overflow: hidden;
+    color: #000;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-info {
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    margin-top: auto;
+    padding: 3rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: #080808;
+}
+
+.footer-left h3 {
+    display: inline-block;
+    font-weight: normal;
+    border-bottom: none;
+}
+
+.copyright {
+    font-size: 0.8rem;
+}
+
+@media (max-width: 968px) {
+    .content-grid { grid-template-columns: 1fr; }
+    nav { justify-content: center; padding: 1rem; }
+}

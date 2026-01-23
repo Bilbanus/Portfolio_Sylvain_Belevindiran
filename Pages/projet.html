@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Sylvain BELEVINDIRAN</title>
+    <link rel="stylesheet" href="../css/stylep.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="a propos.html">À propos</a></li>
+                <li><a href="projet.html">Projet</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Title -->
+    <div class="main-title">
+        <h1>PROJET</h1>
+    </div>
+
+    <!-- Sections -->
+    <div class="section-container">
+        <!-- Création numérique -->
+        <div class="carousel-section">
+            <h2 class="section-title">Création numérique</h2>
+            <div class="carousel-wrapper">
+                <div class="carousel-container" id="carousel-creation"></div>
+                <button class="carousel-btn prev" onclick="prevSlide('creation')">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <button class="carousel-btn next" onclick="nextSlide('creation')">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+            <div class="view-all-btn">
+                <button>Voir tous les Projet</button>
+            </div>
+        </div>
+
+        <!-- Développement -->
+        <div class="carousel-section">
+            <h2 class="section-title">Développement</h2>
+            <div class="carousel-wrapper">
+                <div class="carousel-container" id="carousel-developpement"></div>
+                <button class="carousel-btn prev" onclick="prevSlide('developpement')">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <button class="carousel-btn next" onclick="nextSlide('developpement')">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+            <div class="view-all-btn">
+                <button>Voir tous les Projet</button>
+            </div>
+        </div>
+
+        <!-- Stratégie de communication -->
+        <div class="carousel-section">
+            <h2 class="section-title">Stratégie de communication</h2>
+            <div class="carousel-wrapper">
+                <div class="carousel-container" id="carousel-communication"></div>
+                <button class="carousel-btn prev" onclick="prevSlide('communication')">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <button class="carousel-btn next" onclick="nextSlide('communication')">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+            <div class="view-all-btn">
+                <button>Voir tous les Projet</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <div class="modal-header">
+                <div id="modal-icon" class="modal-icon"></div>
+                <h2 class="modal-title" id="modal-title"></h2>
+                <p class="modal-description" id="modal-description"></p>
+            </div>
+            <div class="modal-info">
+                <h3>Technologies utilisées</h3>
+                <p>React, Tailwind CSS, Node.js, MongoDB</p>
+            </div>
+            <div class="modal-info">
+                <h3>Durée du projet</h3>
+                <p>3 mois</p>
+            </div>
+            <div class="modal-buttons">
+                <button class="btn-primary">Voir le projet</button>
+                <button class="btn-secondary">Contact</button>
+            </div>
+        </div>
+    </div>
+
+        <footer>
+            <div class="footer-left">
+                <h3>Sylvain BELEVINDIRAN</h3>
+                <p>Créateur Numérique & UX Designer</p>
+            </div>
+            <div class="footer-right">
+                <div class="copyright">
+                    © 2025 Sylvain BELEVINDIRAN. Tous droits réservés
+                </div>
+            </div>
+        </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
