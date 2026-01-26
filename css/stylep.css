@@ -136,7 +136,7 @@ nav a:hover {
 
 .vitrail-inner.active {
     box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.5), 0 0 30px rgba(250, 204, 21, 0.3);
-    outline: 4px solid #facc15;
+    outline: 4px solid #00C2D1;
 }
 
 .vitrail-bg-creation {
@@ -403,4 +403,93 @@ footer {
     width: 80px;
     height: auto;
     margin-bottom: 1rem;
+}
+/* Personnalisation de la barre de défilement (Chrome/Edge/Safari) */
+.section-content::-webkit-scrollbar, 
+.modal-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.section-content::-webkit-scrollbar-thumb, 
+.modal-content::-webkit-scrollbar-thumb {
+    background: #00C2D1; /* Ton bleu */
+    border-radius: 10px;
+}
+/* --- AJOUT DU SCROLL POUR LES DESCRIPTIONS --- */
+
+/* Applique le scroll sur la page "À Propos" */
+.section-content {
+    max-height: 250px; 
+    overflow-y: auto;
+    padding-right: 10px; /* Petit espace pour ne pas coller à la barre */
+}
+
+/* Applique le scroll sur la fenêtre "Projets" */
+.modal-content {
+    max-height: 85vh; /* Limite à 85% de la hauteur de l'écran */
+    overflow-y: auto;
+}
+
+/* Styliser la barre de défilement pour qu'elle soit discrète et bleue */
+.section-content::-webkit-scrollbar, 
+.modal-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.section-content::-webkit-scrollbar-thumb, 
+.modal-content::-webkit-scrollbar-thumb {
+    background: #00C2D1; 
+    border-radius: 10px;
+}
+
+.section-content::-webkit-scrollbar-track, 
+.modal-content::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* --- NOUVEAUX AJOUTS POUR AGRANDIR L'IMAGE ET LE TEXTE EN BAS --- */
+
+.vitrail-icon {
+    position: absolute;
+    top: 10%; /* Remonte l'image pour laisser de la place au texte */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%; /* Image beaucoup plus grande */
+    height: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.vitrail-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.3));
+}
+
+.vitrail-text-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 10px;
+    background: rgba(0, 0, 0, 0.5); /* Fond sombre transparent */
+    backdrop-filter: blur(5px);
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.vitrail-text-overlay p {
+    color: white;
+    font-size: 0.85rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 0;
+    /* Pour limiter à 2 lignes si le texte est trop long */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }

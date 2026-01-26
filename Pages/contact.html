@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Sylvain BELEVINDIRAN</title>
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/stylea.css">
     <style>
         .contact-container {
@@ -18,6 +19,16 @@
             color: #ffffff;
             margin-bottom: 2rem;
             font-weight: normal;
+            position: relative; /* Ajouté pour le positionnement des traits si besoin */
+        }
+
+        /* Styles pour les traits décoratifs s'ils ne sont pas déjà dans style.css */
+        .decorative-branches {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 2rem;
+            margin-top: -1rem;
         }
 
         .contact-subtitle {
@@ -120,6 +131,12 @@
 
         <div class="contact-container">
             <h1 class="contact-title">CONTACT</h1>
+            
+            <div class="decorative-branches">
+                <div class="branch"></div>
+                <div class="branch"></div>
+            </div>
+
             <p class="contact-subtitle">
                 Une question, une proposition de stage ou un projet à discuter ?<br>
                 N’hésitez pas à me contacter.
@@ -130,7 +147,7 @@
                     <h3>Coordonnées</h3>
                     <p><strong>Nom :</strong> Sylvain BELEVINDIRAN</p>
                     <p><strong>Formation :</strong> BUT MMI – Création Numérique</p>
-                    <p><strong>Email :</strong> sylvain@example.com</p>
+                    <p><strong>Email :</strong> Syl18vain@gmail.com</p>
                     <p><strong>Localisation :</strong> France</p>
                 </div>
 
@@ -152,7 +169,7 @@
             </div>
             <div class="footer-right">
                 <div class="copyright">
-                    © 2025 Sylvain BELEVINDIRAN. Tous droits réservés
+                    © 2025 Sylvain BELEVINDIRAN. Tous droits réservés.
                 </div>
             </div>
         </footer>

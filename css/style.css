@@ -28,12 +28,14 @@ body {
     min-height: 100vh;
     color: #fff;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
 }
 
-/* --- NAVIGATION STYLE ACCUEIL --- */
+/* --- NAVIGATION --- */
 nav {
     display: flex;
-    justify-content: flex-end; /* Aligné à droite comme sur l'accueil */
+    justify-content: flex-end; 
     padding: 1.5rem 3rem;
     gap: 2rem;
 }
@@ -46,7 +48,6 @@ nav a {
     display: inline-block;
 }
 
-/* Effet violet et grossissement au survol */
 nav a:hover {
     color: #5A2BBF !important;
     transform: scale(1.1);
@@ -56,6 +57,7 @@ nav a:hover {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px 40px 60px;
+    flex: 1;
 }
 
 .hero h1 {
@@ -163,56 +165,83 @@ nav a:hover {
     font-size: 0.9rem;
 }
 
-/* --- ICÔNES LOGICIELS --- */
-.dev-icons {
-    display: grid;
-    grid-template-columns: repeat(2, 70px); 
-    gap: 15px 20px; 
+/* --- AJOUT : SECTION CV DANS CONTACT --- */
+.cv-section {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.cv-buttons {
+    display: flex;
+    gap: 10px;
     justify-content: center;
-    padding: 10px 0;
+    margin-top: 10px;
+}
+
+.btn-cv {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #5A2BBF; /* Violet identique à tes titres */
+    color: white !important;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-cv:hover {
+    background: #4a23a0;
+    transform: translateY(-2px);
+}
+
+.btn-cv.btn-secondary {
+    background: #e2e8f0; /* Gris clair pour le téléchargement */
+    color: #1f2937 !important;
+}
+
+.btn-cv.btn-secondary:hover {
+    background: #cbd5e1;
+}
+
+/* --- ICONES : ALIGNEMENT ET AGRANDISSEMENT HTML --- */
+.dev-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
 }
 
 .dev-icon {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: transform 0.3s ease;
 }
 
 .dev-icon img {
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
     object-fit: contain;
+    margin: 0 !important;
+}
+
+.dev-icon img[alt="HTML"] {
+    transform: scale(1.25);
 }
 
 .dev-icon:hover {
     transform: scale(1.1);
 }
 
-/* --- SECTION PROJETS (AJOUTÉ) --- */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.project-card {
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 20px;
-    overflow: hidden;
-    color: #000;
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-}
-
-.project-info {
-    padding: 20px;
-    text-align: center;
-}
-
+/* --- FOOTER --- */
 footer {
     margin-top: auto;
     padding: 3rem 5rem;
@@ -225,14 +254,15 @@ footer {
 .footer-left h3 {
     display: inline-block;
     font-weight: normal;
-    border-bottom: none;
 }
 
 .copyright {
     font-size: 0.8rem;
 }
 
+/* --- RESPONSIVE --- */
 @media (max-width: 968px) {
     .content-grid { grid-template-columns: 1fr; }
     nav { justify-content: center; padding: 1rem; }
+    footer { padding: 2rem; flex-direction: column; align-items: center; text-align: center; }
 }
