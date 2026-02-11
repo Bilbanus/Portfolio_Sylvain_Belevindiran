@@ -25,13 +25,31 @@
         .dev-fix {
             gap: 40px;
         }
+nav a.active {
+    color: #5A2BBF; /* ta couleur violette */
+    border-bottom: 2px solid #5A2BBF;
+}
+nav a.active {
+    color: #5A2BBF;
+    position: relative;
+}
+
+nav a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background: #5A2BBF;
+}
     </style>
 </head>
 <body>
 
 <nav>
     <a href="../index.html">Accueil</a>
-    <a href="a propos.html">À propos</a>
+    <a href="a propos.html" class="active">À propos</a>
     <a href="projet.html">Projet</a>
     <a href="contact.html">Contact</a>
 </nav>
@@ -51,7 +69,7 @@
         <div class="profile-section">
             <div class="avatar-card">
                 <div class="avatar">
-                    <img src="" alt="Sylvain Belevindiran">
+                    <img src="https://www.charlieintel.com/cdn-image/wp-content/uploads/2024/04/13/Genshin-Impact-Arlecchino-build-guide-Best-Polearm-artifact-teams-more.jpg?width=1200&quality=60&format=auto" alt="Sylvain Belevindiran">
                 </div>
                 <h2 class="name">
                     BELEVINDIRAN
@@ -85,7 +103,7 @@
                     <div class="cv-section">
                         <p><strong>Section CV</strong></p>
                         <div class="cv-buttons">
-                            <a href="../img/cv.pdf" target="_blank" class="btn-cv">Voir le CV</a>
+                            <a href="../img/Cv.pdf" target="_blank" class="btn-cv">Voir le CV</a>
                         </div>
                     </div>
                 </div>

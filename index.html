@@ -24,13 +24,31 @@
             margin-bottom: 30px;
             margin-top: 10px;
         }
+nav a.active {
+    color: #5A2BBF; /* ta couleur violette */
+    border-bottom: 2px solid #5A2BBF;
+}
+nav a.active {
+    color: #5A2BBF;
+    position: relative;
+}
+
+nav a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background: #5A2BBF;
+}
     </style>
 </head>
 <body>
     <div class="hero">
         <nav>
-            <a href="index.html">Accueil</a>
-            <a href="Pages/a propos.html">À propos</a>
+            <a href="index.html" class="active">Accueil</a>
+            <a href="Pages/a propos.html" >À propos</a>
             <a href="Pages/projet.html">Projet</a>
             <a href="Pages/contact.html">Contact</a>
         </nav>
@@ -46,7 +64,7 @@
             <div class="welcome-section">
                 <h2>Bienvenue sur mon <span class="highlight-gradient">PORTFOLIO</span></h2>
                 <div class="intro-text">
-                    <p><strong>Étudiant en deuxième année de BUT MMI (Métiers du Multimédia et de l’Internet), Parcours Création Numérique</strong></p>
+                    <p><strong>BELEVINDIRAN Sylvain Étudiant en deuxième année de BUT MMI (Métiers du Multimédia et de l’Internet), Parcours Création Numérique</strong></p>
                     <p>Je suis à la recherche d’un stage pour l’année 2026 afin de développer mes compétences en création et en design, découvrir le fonctionnement du milieu professionnel et participer à des projets liés au graphisme et au multimédia.</p>
                 </div>
             </div>
