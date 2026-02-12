@@ -52,7 +52,7 @@ const sections = {
                 description: 'Ce site a été conçu comme un hub centralisant...',
                 image: '../img/pratique.png',
                 icon : '',
-                link: 'https://rendu-tp1-1zmfopcku-mamadocspignoufs-projects.vercel.app'
+                link: 'https://rendu-tp1.vercel.app'
             },
             {
                 id: 7,
